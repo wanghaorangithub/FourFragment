@@ -18,13 +18,14 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment1_layout, null);
+        View view = inflater.inflate(R.layout.fragment2_layout, null);
         button = (Button) view.findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
                                           if (onButtonClick != null) {
                                               onButtonClick.onClick(button);
+
                                           }
                                       }
                                   }
