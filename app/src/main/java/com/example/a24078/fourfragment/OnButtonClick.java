@@ -7,5 +7,6 @@ package com.example.a24078.fourfragment;
 import android.view.View;
 
 public interface OnButtonClick {
-    public void onClick(View view);
+    public void swichTo1(View view);
+    public void swichTo2(View view);
 }

@@ -17,16 +17,13 @@ public class Fragment2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        onButtonClick = (OnButtonClick) getActivity();
         View view = inflater.inflate(R.layout.fragment2_layout, null);
         button = (Button) view.findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
-                                          if (onButtonClick != null) {
-                                              onButtonClick.onClick(button);
-
-                                          }
+                                          onButtonClick.swichTo1(button);
                                       }
                                   }
         );
@@ -40,6 +37,4 @@ public class Fragment2 extends Fragment {
     public void setOnButtonClick(OnButtonClick onButtonClick) {
         this.onButtonClick = onButtonClick;
     }
-
-
 }
