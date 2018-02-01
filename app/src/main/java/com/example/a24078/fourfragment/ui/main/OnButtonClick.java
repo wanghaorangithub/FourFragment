@@ -1,4 +1,4 @@
-package com.example.a24078.fourfragment;
+package com.example.a24078.fourfragment.ui.main;
 
 /**
  * Created by 24078 on 2018/1/29.

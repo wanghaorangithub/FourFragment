@@ -1,9 +1,10 @@
-package com.example.a24078.fourfragment;
+package com.example.a24078.fourfragment.ui.main;
 
 import android.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.a24078.fourfragment.R;
 
 
 public class MainActivity extends AppCompatActivity implements OnButtonClick {
