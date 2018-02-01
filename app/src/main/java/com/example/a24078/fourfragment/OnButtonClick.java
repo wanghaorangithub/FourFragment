@@ -6,6 +6,6 @@ package com.example.a24078.fourfragment;
 
 
 public interface OnButtonClick {
-    public void swichTo1();
-    public void swichTo2();
+    void switchTo1();
+    void switchTo2();
 }

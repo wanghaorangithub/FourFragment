@@ -23,7 +23,7 @@ public class Fragment2 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
-                                          onButtonClick.swichTo1();
+                                          onButtonClick.switchTo1();
                                       }
                                   }
         );
