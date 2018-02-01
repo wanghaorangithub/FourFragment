@@ -2,7 +2,6 @@ package com.example.a24078.fourfragment;
 
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,7 @@ public class Fragment1 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
-                                          onButtonClick.swichTo2(button);
+                                          onButtonClick.swichTo2();
                                       }
 
 
