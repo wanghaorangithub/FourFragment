@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">FourFragment</string>
+
+    <!--AFragment-->
+    <string name="a_fgm_string1">Button1</string>
+
+    <!--BFragment-->
+    <string name="b_fgm_string1">Button2</string>
+
+    <!--CFragment-->
+    <string name="c_fgm_string1">Button3</string>
+
+    <!--DFragment-->
+    <string name="d_fgm_string1">Button4</string>
 </resources>

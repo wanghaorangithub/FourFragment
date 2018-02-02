@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/c_fgm_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/c_fgm_string1"
         />
 </android.support.constraint.ConstraintLayout>
