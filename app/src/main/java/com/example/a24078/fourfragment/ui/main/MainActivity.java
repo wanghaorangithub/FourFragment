@@ -10,10 +10,10 @@ import com.example.a24078.fourfragment.ui.base.BaseActivity;
 
 
 public class MainActivity extends BaseActivity implements FragmentSwitcher {
-    private AFragment AFragment;
-    private BFragment BFragment;
-    private CFragment CFragment;
-    private DFragment DFragment;
+    private AFragment aFragment;
+    private BFragment bFragment;
+    private CFragment cFragment;
+    private DFragment dFragment;
     private FragmentManager fragmentManager;
 
     @Override
@@ -24,19 +24,15 @@ public class MainActivity extends BaseActivity implements FragmentSwitcher {
     @Override
     protected void created(Bundle bundle) {
         initView();
-        switchTo1();
+        switchToAFragment();
     }
 
     private void initView() {
         fragmentManager = getSupportFragmentManager();
-        AFragment = new AFragment();
-        AFragment.setFragmentSwitcher(this);
-        BFragment = new BFragment();
-        BFragment.setFragmentSwitcher(this);
-        CFragment = new CFragment();
-        CFragment.setFragmentSwitcher(this);
-        DFragment = new DFragment();
-        DFragment.setFragmentSwitcher(this);
+        aFragment = AFragment.newIntance(this);
+        bFragment = BFragment.newIntance(this);
+        cFragment = CFragment.newIntance(this);
+        dFragment = DFragment.newIntance(this);
     }
 
     @Override
@@ -45,30 +41,30 @@ public class MainActivity extends BaseActivity implements FragmentSwitcher {
     }
 
     @Override
-    public void switchTo1() {
+    public void switchToAFragment() {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, AFragment);
+        fragmentTransaction.replace(R.id.frameLayout, aFragment);
         fragmentTransaction.commit();
     }
 
     @Override
-    public void switchTo2() {
+    public void switchToBFragment() {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, BFragment);
+        fragmentTransaction.replace(R.id.frameLayout, bFragment);
         fragmentTransaction.commit();
     }
 
     @Override
-    public void switchTo3() {
+    public void switchToCFragment() {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, CFragment);
+        fragmentTransaction.replace(R.id.frameLayout, cFragment);
         fragmentTransaction.commit();
     }
 
     @Override
-    public void switchTo4() {
+    public void switchToDFragment() {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, DFragment);
+        fragmentTransaction.replace(R.id.frameLayout, dFragment);
         fragmentTransaction.commit();
     }
 }

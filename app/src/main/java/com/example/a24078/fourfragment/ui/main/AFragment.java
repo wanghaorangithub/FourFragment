@@ -17,7 +17,7 @@ public class AFragment extends BaseFragment {
 
     //button click event
     private void buttonClickEvent() {
-        fragmentSwitcher.switchTo2();
+        fragmentSwitcher.switchToBFragment();
     }
 
     @Override
@@ -50,6 +50,12 @@ public class AFragment extends BaseFragment {
 
     public void setFragmentSwitcher(FragmentSwitcher fragmentSwitcher) {
         this.fragmentSwitcher = fragmentSwitcher;
+    }
+
+    static AFragment newIntance(FragmentSwitcher fragmentSwitcher) {
+        AFragment aFragment = new AFragment();
+        aFragment.setFragmentSwitcher(fragmentSwitcher);
+        return aFragment;
     }
 
 }

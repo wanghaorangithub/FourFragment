@@ -5,11 +5,11 @@ package com.example.a24078.fourfragment.ui.main;
  */
 
 public interface FragmentSwitcher {
-    void switchTo1();
+    void switchToAFragment();
 
-    void switchTo2();
+    void switchToBFragment();
 
-    void switchTo3();
+    void switchToCFragment();
 
-    void switchTo4();
+    void switchToDFragment();
 }

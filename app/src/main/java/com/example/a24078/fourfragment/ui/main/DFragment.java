@@ -1,10 +1,7 @@
 package com.example.a24078.fourfragment.ui.main;
 
 import android.os.Bundle;
-import android.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.a24078.fourfragment.R;
@@ -19,7 +16,7 @@ public class DFragment extends BaseFragment {
 
     //button click event
     private void buttonClickEvent() {
-        fragmentSwitcher.switchTo1();
+        fragmentSwitcher.switchToAFragment();
     }
 
     @Override
@@ -54,5 +51,10 @@ public class DFragment extends BaseFragment {
         this.fragmentSwitcher = fragmentSwitcher;
     }
 
+    static DFragment newIntance(FragmentSwitcher fragmentSwitcher) {
+        DFragment dFragment = new DFragment();
+        dFragment.setFragmentSwitcher(fragmentSwitcher);
+        return dFragment;
+    }
 }
 
