@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.a24078.fourfragment.R;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by haoran on 2018/2/1.
  */
@@ -25,6 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layoutId());
+        ButterKnife.bind(this);
         created(savedInstanceState);
     }
 
