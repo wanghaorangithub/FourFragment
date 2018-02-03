@@ -36,8 +36,6 @@ public class BFragment extends BaseFragment {
                                       public void onClick(View view) {
                                           buttonClickEvent();
                                       }
-
-
                                   }
         );
     }

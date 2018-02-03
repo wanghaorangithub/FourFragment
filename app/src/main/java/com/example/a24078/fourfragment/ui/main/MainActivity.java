@@ -29,7 +29,7 @@ public class MainActivity extends BaseActivity implements FragmentSwitcher {
 
     private void initView() {
         fragmentManager = getSupportFragmentManager();
-        aFragment = AFragment.newIntance(this);
+        aFragment = AFragment.newInstance(this);
         bFragment = BFragment.newIntance(this);
         cFragment = CFragment.newIntance(this);
         dFragment = DFragment.newIntance(this);

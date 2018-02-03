@@ -37,8 +37,6 @@ public class AFragment extends BaseFragment {
                                       public void onClick(View view) {
                                           buttonClickEvent();
                                       }
-
-
                                   }
         );
     }
@@ -52,7 +50,7 @@ public class AFragment extends BaseFragment {
         this.fragmentSwitcher = fragmentSwitcher;
     }
 
-    static AFragment newIntance(FragmentSwitcher fragmentSwitcher) {
+    static AFragment newInstance(FragmentSwitcher fragmentSwitcher) {
         AFragment aFragment = new AFragment();
         aFragment.setFragmentSwitcher(fragmentSwitcher);
         return aFragment;
