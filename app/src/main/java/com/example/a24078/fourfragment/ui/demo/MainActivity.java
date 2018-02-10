@@ -1,15 +1,28 @@
-package com.example.a24078.fourfragment.ui.main;
+package com.example.a24078.fourfragment.ui.demo;
 
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.widget.Button;
 
 import com.example.a24078.fourfragment.R;
 import com.example.a24078.fourfragment.ui.base.BaseActivity;
 
+import butterknife.BindView;
+import butterknife.OnClick;
+
 
 public class MainActivity extends BaseActivity implements FragmentSwitcher {
+
+    @BindView(R.id.main_act_button1)
+    Button button;
+
+    @OnClick(R.id.main_act_button1)
+    public void clickButton() {
+        button.setText(R.string.main_act_string2);
+    }
+
     private AFragment aFragment;
     private BFragment bFragment;
     private CFragment cFragment;
@@ -30,9 +43,9 @@ public class MainActivity extends BaseActivity implements FragmentSwitcher {
     private void initView() {
         fragmentManager = getSupportFragmentManager();
         aFragment = AFragment.newInstance(this);
-        bFragment = BFragment.newIntance(this);
-        cFragment = CFragment.newIntance(this);
-        dFragment = DFragment.newIntance(this);
+        bFragment = BFragment.newInstance(this);
+        cFragment = CFragment.newInstance(this);
+        dFragment = DFragment.newInstance(this);
     }
 
     @Override

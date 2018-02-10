@@ -8,12 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.a24078.fourfragment.R;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by haoran on 2018/2/1.
  */
 
-public abstract class BaseActivity extends AppCompatActivity{
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract
     @LayoutRes

@@ -4,12 +4,21 @@
     android:id="@+id/frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a24078.fourfragment.ui.main.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.a24078.fourfragment.ui.demo.MainActivity">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:text="@string/main_act_string1"
+        android:id="@+id/main_act_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
 </LinearLayout>

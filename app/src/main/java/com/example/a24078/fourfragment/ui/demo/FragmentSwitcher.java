@@ -1,4 +1,4 @@
-package com.example.a24078.fourfragment.ui.main;
+package com.example.a24078.fourfragment.ui.demo;
 
 /**
  * Created by haoran on 2018/1/29.

@@ -1,4 +1,4 @@
-package com.example.a24078.fourfragment.ui.main;
+package com.example.a24078.fourfragment.ui.demo;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,22 +7,21 @@ import android.widget.Button;
 import com.example.a24078.fourfragment.R;
 import com.example.a24078.fourfragment.ui.base.BaseFragment;
 
-
 /**
  * Created by 24078 on 2018/1/29.
  */
 
-public class AFragment extends BaseFragment {
+public class CFragment extends BaseFragment {
     private FragmentSwitcher fragmentSwitcher;
 
     //button click event
     private void buttonClickEvent() {
-        fragmentSwitcher.switchToBFragment();
+        fragmentSwitcher.switchToDFragment();
     }
 
     @Override
     protected int layoutId() {
-        return R.layout.fragment_a;
+        return R.layout.fragment_c;
     }
 
     @Override
@@ -31,12 +30,14 @@ public class AFragment extends BaseFragment {
     }
 
     private void initView() {
-        Button button = mFragment.findViewById(R.id.a_fgm_button1);
+        Button button = mFragment.findViewById(R.id.c_fgm_button1);
         button.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
                                           buttonClickEvent();
                                       }
+
+
                                   }
         );
     }
@@ -50,10 +51,10 @@ public class AFragment extends BaseFragment {
         this.fragmentSwitcher = fragmentSwitcher;
     }
 
-    static AFragment newInstance(FragmentSwitcher fragmentSwitcher) {
-        AFragment aFragment = new AFragment();
-        aFragment.setFragmentSwitcher(fragmentSwitcher);
-        return aFragment;
+    static CFragment newInstance(FragmentSwitcher fragmentSwitcher) {
+        CFragment cFragment = new CFragment();
+        cFragment.setFragmentSwitcher(fragmentSwitcher);
+        return cFragment;
     }
-
 }
+

@@ -12,4 +12,19 @@
 
     <!--DFragment-->
     <string name="d_fgm_string1">Button4</string>
+
+    <string name="main_act_string1">buttoninmain</string>
+
+    <string name="main_act_string2">whr</string>
+    <!--HomeActivity-->
+    <string name="home_act_string1">To Fourfragment</string>
+    <string name="home_act_string2">To ObjectBox.demo</string>
+    <string name="home_act_string3">NULL</string>
+    <string name="home_act_string4">NULL</string>\
+    <!--NoteActivity-->
+    <string name="app_name_reactive">OB Reactive Example</string>
+    <string name="enter_new_note">Enter new note</string>
+    <string name="add">Add</string>
+    <string name="click_to_remove">Click a note to remove it</string>
+    <string name="log">Log</string>
 </resources>
