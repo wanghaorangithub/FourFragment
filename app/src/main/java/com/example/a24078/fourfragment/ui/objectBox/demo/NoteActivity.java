@@ -25,9 +25,6 @@ import io.objectbox.Box;
 import io.objectbox.BoxStore;
 import io.objectbox.query.Query;
 
-/**
- * Created by haoran on 2018/2/8.
- */
 
 public class NoteActivity extends BaseActivity {
     @BindView(R.id.obj_act_editText1)

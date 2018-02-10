@@ -10,7 +10,6 @@ import io.objectbox.android.BuildConfig;
 public class App extends Application {
 
     public static final String TAG = "ObjectBoxExample";
-    public static final boolean EXTERNAL_DIR = false;
 
     private BoxStore boxStore;
 

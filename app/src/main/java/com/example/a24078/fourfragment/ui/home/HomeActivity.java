@@ -13,9 +13,7 @@ import com.example.a24078.fourfragment.ui.objectBox.demo.NoteActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by haoran on 2018/2/8.
- */
+
 
 public class HomeActivity extends BaseActivity {
     @BindView(R.id.home_act_button1)
