@@ -1,4 +1,4 @@
-package com.example.a24078.fourfragment.ui.objectBox.demo;
+package com.example.a24078.fourfragment.ui.objectBox.note;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -87,4 +87,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
     void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
 }
+

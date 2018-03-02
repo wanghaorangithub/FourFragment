@@ -3,7 +3,7 @@
     package="com.example.a24078.fourfragment">
 
     <application
-        android:name=".ui.objectBox.demo.App"
+        android:name=".utils.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.objectBox.demo.NoteActivity"></activity>
+        <activity android:name=".ui.objectBox.note.NoteActivity"></activity>
     </application>
 
 </manifest>

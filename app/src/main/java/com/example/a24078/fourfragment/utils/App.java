@@ -1,7 +1,9 @@
-package com.example.a24078.fourfragment.ui.objectBox.demo;
+package com.example.a24078.fourfragment.utils;
 
 import android.app.Application;
 import android.util.Log;
+
+import com.example.a24078.fourfragment.ui.objectBox.note.MyObjectBox;
 
 import io.objectbox.BoxStore;
 import io.objectbox.android.AndroidObjectBrowser;

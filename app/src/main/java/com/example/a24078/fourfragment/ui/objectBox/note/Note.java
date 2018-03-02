@@ -1,4 +1,4 @@
-package com.example.a24078.fourfragment.ui.objectBox.demo;
+package com.example.a24078.fourfragment.ui.objectBox.note;
 
 import java.util.Date;
 

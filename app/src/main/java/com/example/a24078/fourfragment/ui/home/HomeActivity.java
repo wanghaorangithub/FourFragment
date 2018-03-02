@@ -8,7 +8,7 @@ import android.widget.Toast;
 import com.example.a24078.fourfragment.R;
 import com.example.a24078.fourfragment.ui.base.BaseActivity;
 import com.example.a24078.fourfragment.ui.demo.MainActivity;
-import com.example.a24078.fourfragment.ui.objectBox.demo.NoteActivity;
+import com.example.a24078.fourfragment.ui.objectBox.note.NoteActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
