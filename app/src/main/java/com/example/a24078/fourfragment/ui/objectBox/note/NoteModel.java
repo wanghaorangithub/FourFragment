@@ -38,22 +38,11 @@ public class NoteModel implements NoteContract.Model {
         notesQuery = notesBox.query().order(Note_.text).build();
     }
 
-    @Override
-    public void requestNotesToAddNote() {
-        List<Note> notes = notesQuery.find();
-        callback.requestNotesToAddNoteSuccess(notes);
-    }
 
     @Override
-    public void requestNotesToRemoveNote(int position) {
+    public void requestDataFromDatabase() {
         List<Note> notes = notesQuery.find();
-        callback.requestNotesToRemoveNoteSuccess(notes, position);
-    }
-
-    @Override
-    public void requestNotesToUpdateNote() {
-        List<Note> notes = notesQuery.find();
-        callback.requestNotesToUpdateNoteSuccess(notes);
+        callback.requestDataFromDatabaseSuccess(notes);
     }
 
 
@@ -69,12 +58,14 @@ public class NoteModel implements NoteContract.Model {
         note.setDate(new Date());
         //将note传入数据库
         notesBox.put(note);
+        callback.addNoteToDatabaseSuccess();
         Log.d(App.TAG, "Inserted new note, ID: " + note.getId());
     }
 
     @Override
-    public void removeNoteFormDatabase(Note note) {
+    public void removeNoteFromDatabase(Note note) {
         notesBox.remove(note);
+        callback.removeNoteFromDatabaseSuccess();
         Log.d(App.TAG, "Deleted note, ID: " + note.getId());
     }
 }

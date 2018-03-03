@@ -4,8 +4,6 @@ import java.util.List;
 
 /**
  * Created by haoran on 2018/3/1.
- *
- *
  */
 
 class NotePresenter implements NoteContract.Presenter, NoteContract.Callback {
@@ -22,36 +20,31 @@ class NotePresenter implements NoteContract.Presenter, NoteContract.Callback {
     public void start() {
         view.setUpView();
         model.initObjectBox();
-
     }
 
     @Override
     public void tryToAddNote() {
-        model.requestNotesToAddNote();
-        model.requestNotesToUpdateNote();
+        model.addNoteToDatabase(view.getEditTextText());
         view.setEditTextBlank();
     }
 
     @Override
-    public void tryToRemoveNote(int position) {
-        model.requestNotesToRemoveNote(position);
-        model.requestNotesToUpdateNote();
-    }
-
-    //Callback
-    @Override
-    public void requestNotesToAddNoteSuccess(List<Note> notes) {
-        model.addNoteToDatabase(view.getEditTextText());
+    public void tryToRemoveNote(Note note) {
+        model.removeNoteFromDatabase(note);
     }
 
     @Override
-    public void requestNotesToRemoveNoteSuccess(List<Note> notes, int position) {
-        Note note = view.getItemWhichWillRemoved(position);
-        model.removeNoteFormDatabase(note);
+    public void addNoteToDatabaseSuccess() {
+        model.requestDataFromDatabase();
     }
 
     @Override
-    public void requestNotesToUpdateNoteSuccess(List<Note> notes) {
+    public void removeNoteFromDatabaseSuccess() {
+        model.requestDataFromDatabase();
+    }
+
+    @Override
+    public void requestDataFromDatabaseSuccess(List<Note> notes) {
         view.setDataInRecyclerView(notes);
     }
 

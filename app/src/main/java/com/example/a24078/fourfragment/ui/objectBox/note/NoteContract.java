@@ -21,19 +21,14 @@ public interface NoteContract {
 
         String getEditTextText();
 
-        Note getItemWhichWillRemoved(int position);
     }
 
     interface Model {
-        void requestNotesToAddNote();
-
-        void requestNotesToRemoveNote(int position);
-
-        void requestNotesToUpdateNote();
+        void requestDataFromDatabase();
 
         void addNoteToDatabase(String text);
 
-        void removeNoteFormDatabase(Note note);
+        void removeNoteFromDatabase(Note note);
 
         void initObjectBox();
     }
@@ -43,16 +38,16 @@ public interface NoteContract {
 
         void tryToAddNote();
 
-        void tryToRemoveNote(int position);
+        void tryToRemoveNote(Note note);
 
     }
 
     interface Callback {
-        void requestNotesToAddNoteSuccess(List<Note> notes);
+        void addNoteToDatabaseSuccess();
 
-        void requestNotesToRemoveNoteSuccess(List<Note> notes, int position);
+        void removeNoteFromDatabaseSuccess();
 
-        void requestNotesToUpdateNoteSuccess(List<Note> notes);
+        void requestDataFromDatabaseSuccess(List<Note> notes);
 
     }
 }

@@ -40,7 +40,8 @@ public class NoteActivity extends BaseActivity implements NoteContract.View {
         notesAdapter.setOnItemClickListener(new NotesAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                presenter.tryToRemoveNote(position);
+                Note note=getItemWhichWillRemoved(position);
+                presenter.tryToRemoveNote(note);
             }
         });
     }
@@ -66,7 +67,6 @@ public class NoteActivity extends BaseActivity implements NoteContract.View {
     @Override
     protected void resumed() {
     }
-
 
     private void setUpAddButton(boolean enabled) {
         addNoteButton.setEnabled(enabled);
@@ -112,7 +112,6 @@ public class NoteActivity extends BaseActivity implements NoteContract.View {
         recyclerView.setAdapter(notesAdapter);
     }
 
-
     @Override
     public void setUpView() {
         setUpRecyclerView();
@@ -140,8 +139,7 @@ public class NoteActivity extends BaseActivity implements NoteContract.View {
         return editText.getText().toString();
     }
 
-    @Override
-    public Note getItemWhichWillRemoved(int position) {
+    private Note getItemWhichWillRemoved(int position) {
         return notesAdapter.getItem(position);
     }
 
